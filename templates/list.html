@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ism</th>
+        <th scope="col">yosh</th>
+        <th scope="col">guruh</th>
+        <th scope="col">tugulgan kun</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% if q %}
+        <h1>malumot topildi {{q}}</h1>
+        {% else %}
+        
+        {% endif %}
+        {% for pupil in pupil %}
+        <tr>
+            <td>{{pupil.ism}}</td>
+            <td>{{pupil.yosh}}</td>
+            <td>{{pupil.guruh}}</td>
+            <td>{{pupil.tugulgan_kun}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>  
+
+{% endblock content %}
